@@ -24,6 +24,7 @@ public class Main {
         return newArr;
     }
     public static void main(String[] args) {
+        int x[] = {5,4,6,7,8};
         System.out.println(Arrays.toString(insertShiftArray(x,5)));
     }
 }
