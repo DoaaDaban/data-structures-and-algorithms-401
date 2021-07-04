@@ -36,4 +36,15 @@ public class TestLinkedList {
         Assertions.assertFalse(testList.includes(19) , "Return false when not finding a specific element");
         Assertions.assertEquals("{ 12 -> 15 -> 13 -> 15 -> null }" , String.valueOf(testList));
     }
+
+
+    @Test
+    public void testInsert() {
+        testList.insert(15);
+        testList.insert(150);
+//        testList.insertAfter(15 , 16); unComment to test both before and after , comment to test if you can add before the first element .
+        testList.insertBefore(15 , 16);
+        Assertions.assertEquals(4 , testList.length);
+
+    }
 }
