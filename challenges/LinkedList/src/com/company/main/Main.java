@@ -1,4 +1,4 @@
-package com.company;
+package com.company.main;
 
 public class Main {
 
@@ -15,5 +15,6 @@ public class Main {
         ll.insertBefore(12 , 5);
         System.out.println(ll);
         System.out.println(ll.includes(2));
+        System.out.println(ll.head.data);
     }
 }
