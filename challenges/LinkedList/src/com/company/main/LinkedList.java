@@ -1,7 +1,7 @@
-package com.company;
+package com.company.main;
 
 public class LinkedList <T>{
-    Node<T>  head;
+    public Node<T>  head;
     public int length;
     public LinkedList() {
         this.head = null;
@@ -50,7 +50,6 @@ public class LinkedList <T>{
             }
             newNode.next = trav.next;
             trav.next = newNode;
-            System.out.println(trav.data);
         }
         length++;
 
