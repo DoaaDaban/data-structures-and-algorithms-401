@@ -43,8 +43,8 @@ public class TestLinkedList {
         testList.insert(15);
         testList.insert(150);
 //        testList.insertAfter(15 , 16); unComment to test both before and after , comment to test if you can add before the first element .
-        testList.insertBefore(15 , 16);
-        Assertions.assertEquals(4 , testList.length);
+//        testList.insertBefore(15 , 16);
+        Assertions.assertEquals(2 , testList.length);
 
     }
 }
