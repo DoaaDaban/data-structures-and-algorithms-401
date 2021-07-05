@@ -16,5 +16,8 @@ public class Main {
         System.out.println(ll);
         System.out.println(ll.includes(2));
         System.out.println(ll.head.data);
+        ll.append(11);
+        System.out.println(ll.kthFromEnd(9));
+        System.out.println("");
     }
 }

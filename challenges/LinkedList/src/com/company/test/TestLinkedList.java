@@ -47,4 +47,43 @@ public class TestLinkedList {
         Assertions.assertEquals(2 , testList.length);
 
     }
+
+    @Test
+    public void testKthFromEnd() {
+        testList.append(10);
+        testList.append(20);
+        testList.append(30);
+        testList.append(40);
+        testList.append(50);
+        testList.append(60);
+        testList.append(70);
+
+        /**
+         * kth arg greater than the end
+         */
+            Assertions.assertNull(testList.kthFromEnd(9) , "Returns null if the index is greater than the end ");
+        /**
+         * kth arg equals the length
+         */
+        Assertions.assertNull( testList.kthFromEnd(7) ,"Return null if the index equals null");
+        /**
+         * kth arg is negative
+         */
+        Assertions.assertNull( testList.kthFromEnd(-7) ,"Return null if the index equals a negative number");
+
+        /**
+         * kth arg in the middle of linked list
+         */
+        Assertions.assertEquals(40 , testList.kthFromEnd(3) , "returns true if the method returns the value in the 3rd index from the end ");
+
+        /**
+         * kth on linked list of size 1
+         */
+
+        testList.clear();
+        testList.append(1);
+        Assertions.assertEquals(1 , testList.length , "return true if the size is 1 ");
+        Assertions.assertEquals(1 , testList.kthFromEnd(0) , "Return true if it finds the only element in the list ");
+
+    }
 }

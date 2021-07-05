@@ -84,6 +84,30 @@ public class LinkedList <T>{
         this.head = null;
         length = 0;
     }
+
+    public T kthFromEnd(int k) {
+        if(k >= this.length) {
+            System.out.println("Index provided is greater than the elements count");
+            return null;
+        }
+
+        else if (k < 0) {
+            System.out.println("negative index doesn't exist");
+            return null;
+        }
+
+        else {
+            System.out.println(this.length);
+            int tempCounter = this.length-1 ;
+            Node<T> trav = head;
+            while (tempCounter != k && trav != null){
+                trav = trav.next;
+                tempCounter--;
+            }
+
+            return trav.data;
+        }
+    }
     @Override
     public String toString() {
         String list = "{ ";
