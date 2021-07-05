@@ -1,4 +1,4 @@
-public class binarySearch {
+class binarySearch {
         public static int binarySearch(int[] sortedArr , int searchKey) {
         int left = 0, right = sortedArr.length - 1;
         while (left <= right) {
@@ -14,7 +14,7 @@ public class binarySearch {
     }
 
     public static void main (String[] args) {
-        int arr[] = [10,20,30,45,155,120];
+        int arr[] = {10,20,30,45,155,120};
         System.out.println(binarySearch(arr , 45));
     }
 }
