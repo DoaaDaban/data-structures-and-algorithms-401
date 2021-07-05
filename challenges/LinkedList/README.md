@@ -19,3 +19,5 @@ Used Classes to implement the linked list with the O(1) and O(n) for it's method
 ###### args()
 #### kthFromEnd Method : find the element index from the end of the linked list .
 ##### args (T index)
+
+![Image](linked.png)

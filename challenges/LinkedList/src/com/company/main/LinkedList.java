@@ -93,6 +93,7 @@ public class LinkedList <T>{
 
         else if (k < 0) {
             System.out.println("negative index doesn't exist");
+            return null;
         }
 
         else {
@@ -106,7 +107,6 @@ public class LinkedList <T>{
 
             return trav.data;
         }
-        return null;
     }
     @Override
     public String toString() {
