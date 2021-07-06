@@ -97,10 +97,9 @@ public class LinkedList <T>{
         }
 
         else {
-            System.out.println(this.length);
             int tempCounter = this.length-1 ;
             Node<T> trav = head;
-            while (tempCounter != k && trav != null){
+            while (tempCounter != k ){
                 trav = trav.next;
                 tempCounter--;
             }
