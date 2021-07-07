@@ -1,7 +1,6 @@
 package com.company.main;
-
+import java.io.InputStreamReader;
 import java.util.Locale;
-
 public class Main<T> {
     public LinkedList<T> zipLists(LinkedList<T> l1 , LinkedList<T> l2){
         LinkedList<T> tempLinked = new LinkedList<>();
@@ -44,25 +43,5 @@ public class Main<T> {
         ll = new Main().zipLists(ll , l2);
         System.out.println(ll);
 
-        String x = "Pseudo Code :\n" +
-                "    zipListsLinkedList<T> l1 , LinkedList<T> l2\n" +
-                "        LinkedList<T> tempLinked -> new LinkedList<>\n" +
-                "        Node<T> trav1 -> l1.head;\n" +
-                "        Node<T> trav2 -> l2.head;\n" +
-                "        int max -> Math.max(l1.length, l2.length)\n" +
-                "        while  max > 0  \n" +
-                "                if trav1 != null\n" +
-                "                    tempLinked.append(trav1.data)\n" +
-                "                    trav1 = trav1.next\n" +
-                "                \n" +
-                "\n" +
-                "                if trav2 != null) \n" +
-                "                                 tempLinked.append(trav2.data)\n" +
-                "                    trav2 -> trav2.next\n" +
-                "                \n" +
-                "            max--\n" +
-                "\n" +
-                "        return tempLinked";
-        System.out.println(x.toUpperCase());
     }
 }
