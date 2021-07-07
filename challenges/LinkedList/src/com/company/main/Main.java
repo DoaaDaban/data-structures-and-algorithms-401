@@ -1,37 +1,68 @@
 package com.company.main;
 
-public class Main {
+import java.util.Locale;
 
+public class Main<T> {
+    public LinkedList<T> zipLists(LinkedList<T> l1 , LinkedList<T> l2){
+        LinkedList<T> tempLinked = new LinkedList<>();
+        Node<T> trav1 = l1.head;
+        Node<T> trav2 = l2.head;
+        int max = Math.max(l1.length, l2.length);
+        while (max > 0 ) {
+                if (trav1 != null){
+                    tempLinked.append(trav1.data);
+                    trav1 = trav1.next;
+                }
+
+                if (trav2 != null) {
+                            tempLinked.append(trav2.data);
+                    trav2 = trav2.next;
+                }
+            max--;
+        }
+
+        return tempLinked;
+    }
     public static void main(String[] args) {
 	    LinkedList<Integer> ll = new LinkedList<>();
-        ll.insert(2);
-        ll.insert(4);
-        ll.insert(5);
-        ll.insert(15);
-        ll.append(12);
-        ll.append(12);
-        ll.append(12);
-        ll.insertAfter(4 , 9);
-        ll.insertBefore(12 , 5);
+        ll.append(1);
+        ll.append(3);
+        ll.append(3);
+        ll.append(4);
+        ll.append(5);
+        ll.append(5);
+        ll.append(6);
         System.out.println(ll);
-        System.out.println(ll.includes(2));
-        System.out.println(ll.head.data);
-        ll.append(11);
-        ll.append(20);
-        ll.append(30);
-        ll.append(40);
-        ll.append(50);
-        ll.append(60);
-        ll.insertAfter(10,10);
-        ll.insertAfter(10,10);
-        ll.insertAfter(10,10);
-        ll.insertAfter(14,10);
-        ll.insertBefore(14 , 10);
-        System.out.println(ll.length);
-        System.out.println(ll.kthFromEnd(0));
-        System.out.println(ll.kthFromEnd(1));
-        System.out.println(ll.kthFromEnd(2));
-        System.out.println();
-        System.out.println("");
+
+        LinkedList<Integer> l2 = new LinkedList<>();
+        l2.append(15);
+        l2.append(15);
+        l2.append(15);
+        l2.append(15);
+        l2.append(15);
+        l2.append(15);
+        ll = new Main().zipLists(ll , l2);
+        System.out.println(ll);
+
+        String x = "Pseudo Code :\n" +
+                "    zipListsLinkedList<T> l1 , LinkedList<T> l2\n" +
+                "        LinkedList<T> tempLinked -> new LinkedList<>\n" +
+                "        Node<T> trav1 -> l1.head;\n" +
+                "        Node<T> trav2 -> l2.head;\n" +
+                "        int max -> Math.max(l1.length, l2.length)\n" +
+                "        while  max > 0  \n" +
+                "                if trav1 != null\n" +
+                "                    tempLinked.append(trav1.data)\n" +
+                "                    trav1 = trav1.next\n" +
+                "                \n" +
+                "\n" +
+                "                if trav2 != null) \n" +
+                "                                 tempLinked.append(trav2.data)\n" +
+                "                    trav2 -> trav2.next\n" +
+                "                \n" +
+                "            max--\n" +
+                "\n" +
+                "        return tempLinked";
+        System.out.println(x.toUpperCase());
     }
 }

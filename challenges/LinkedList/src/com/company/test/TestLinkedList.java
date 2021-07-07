@@ -1,15 +1,20 @@
 package com.company.test;
 
 import com.company.main.LinkedList;
+import com.company.main.Main;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class TestLinkedList {
     LinkedList<Integer> testList;
+    LinkedList<Integer> testList2;
+    Main<Integer> main;
     @BeforeEach
     public void init() {
         testList = new LinkedList<>();
+        testList2 = new LinkedList<>();
+        main = new Main<>();
     }
 
     @Test
@@ -20,7 +25,7 @@ public class TestLinkedList {
     @Test
     public void testAdding() {
         testList.append(15);
-        Assertions.assertTrue( testList.length == 1 ,"Return true if linked list is initialized and have length");
+        Assertions.assertEquals(1, testList.length, "Return true if linked list is initialized and have length");
 
     }
 
@@ -85,5 +90,18 @@ public class TestLinkedList {
         Assertions.assertEquals(1 , testList.length , "return true if the size is 1 ");
         Assertions.assertEquals(1 , testList.kthFromEnd(0) , "Return true if it finds the only element in the list ");
 
+    }
+
+    @Test
+    public void testZipList() {
+        testList.append(1);
+        testList.append(1);
+        testList.append(1);
+        testList2.append(2);
+        testList2.append(2);
+        testList2.append(2);
+        testList2.append(2);
+
+        Assertions.assertEquals(7, main.zipLists(testList, testList2).length, "Return true if merges two linked lists ");
     }
 }

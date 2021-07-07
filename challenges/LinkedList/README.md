@@ -21,3 +21,9 @@ Used Classes to implement the linked list with the O(1) and O(n) for it's method
 ##### args (T index)
 
 ![Image](linked.png)
+
+
+#### zipLists Method : merge two linked lists and return a new merged linked lists .
+##### args (LinkedList<T> , LinkedList<T>)
+
+![image](zipList.png)
