@@ -119,6 +119,7 @@ public class LinkedList <T>{
         }
     }
 
+
     @Override
     public String toString() {
         String list = "{ ";
