@@ -14,14 +14,14 @@ public class QueueTest {
 
     @Test
     public void testEnqueue() {
-        /**
-         * Test to enqueue one value
+        /*
+          Test to enqueue one value
          */
         testQueue.enqueue(15);
         Assertions.assertEquals(0 , testQueue.getIdx());
 
-        /**
-         * Enquque multiple elements
+        /*
+          Enqueue multiple elements
          */
 
         testQueue.enqueue(2);
@@ -33,16 +33,16 @@ public class QueueTest {
 
     @Test
     public void testDequeue() {
-        /**
-         * Test dequeue and return value
+        /*
+          Test dequeue and return value
          */
         testQueue.enqueue(1);
         testQueue.enqueue(2);
         testQueue.enqueue(3);
         testQueue.enqueue(4);
         Assertions.assertEquals(1 , testQueue.peek());
-        /**
-         * Empty a queue using dequeue
+        /*
+          Empty a queue using dequeue
          */
 
         testQueue.dequeue();
@@ -54,8 +54,8 @@ public class QueueTest {
 
     @Test
     public void testPeek() {
-        /**
-         * Test peek returns the oldest entered item
+        /*
+          Test peek returns the oldest entered item
          */
         testQueue.enqueue(3);
         testQueue.enqueue(4);
@@ -65,12 +65,8 @@ public class QueueTest {
 
     @Test
     public void testException() {
-        Assertions.assertThrows(NullPointerException.class , () -> {
-            testQueue.peek()
-            ;});
+        Assertions.assertThrows(NullPointerException.class , () -> testQueue.peek());
 
-        Assertions.assertThrows(NullPointerException.class , () -> {
-            testQueue.dequeue()
-            ;});
+        Assertions.assertThrows(NullPointerException.class , () -> testQueue.dequeue());
     }
 }
