@@ -54,29 +54,29 @@ public class Main<T> {
     }
     public static void main(String[] args) {
 	    LinkedList<Integer> ll = new LinkedList<>();
-        ll.append(1);
-        ll.append(3);
-        ll.append(4);
-        ll.append(4);
-        ll.append(3);
-        ll.append(1);
-        ll.append(6);
+//        ll.append(1);
+//        ll.append(3);
+//        ll.append(4);
+//        ll.append(4);
+//        ll.append(3);
+//        ll.append(6);
 //        ll.append(5);
 //        ll.append(5);
 //        ll.append(6);
+        ll.insertBefore(1 , 2);
         System.out.println(ll);
-
-        LinkedList<Integer> l2 = new LinkedList<>();
-        l2.append(15);
-        l2.append(15);
-        l2.append(15);
-        l2.append(15);
-        l2.append(15);
-        l2.append(15);
-        System.out.println(ll);
-        ll = new Main().reverseList(ll);
-        System.out.println(ll);
-        System.out.println(new Main().isPalindrome(ll));
+//
+//        LinkedList<Integer> l2 = new LinkedList<>();
+//        l2.append(15);
+//        l2.append(15);
+//        l2.append(15);
+//        l2.append(15);
+//        l2.append(15);
+//        l2.append(15);
+//        System.out.println(ll);
+//        ll = new Main().reverseList(ll);
+//        System.out.println(ll);
+//        System.out.println(new Main().isPalindrome(ll));
 
     }
 

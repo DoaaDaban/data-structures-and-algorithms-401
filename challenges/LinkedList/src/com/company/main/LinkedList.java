@@ -46,8 +46,15 @@ public class LinkedList <T>{
     }
     public void insertBefore(T data , T newData){
         Node<T> newNode = new Node<>(newData);
+
         if(this.head == null) {
             head = newNode;
+            return;
+        }
+        else if (data == head.data) {
+            newNode.next = head;
+            head = newNode;
+            return;
         }
         else {
             Node<T> trav = head;
