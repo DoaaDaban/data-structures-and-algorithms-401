@@ -24,14 +24,14 @@ public class Stack<G> {
         }
         idx++;
     }
-    public Node<G> pop () {
+    public G pop () {
         if (top == null) {
             throw new NullPointerException();
         }
         Node<G> popped = top;
         top = top.next;
         idx--;
-        return popped;
+        return popped.data;
     }
 
     public G peek () {

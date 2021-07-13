@@ -21,6 +21,8 @@ public class Library {
         System.out.println(stack.isEmpty());
 
         Queue<Integer> queue = new Queue<>();
+
+
         queue.enqueue(15);
         queue.enqueue(16);
         queue.enqueue(17);
@@ -29,5 +31,12 @@ public class Library {
         System.out.println(queue.peek());
         System.out.println(queue);
 
+        PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
+        pseudoQueue.enqueue(15);
+        pseudoQueue.enqueue(16);
+        pseudoQueue.enqueue(17);
+        pseudoQueue.enqueue(18);
+        pseudoQueue.dequeue();
+        System.out.println(pseudoQueue.toString());
     }
 }
