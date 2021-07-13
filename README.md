@@ -9,4 +9,5 @@
 | 02          | [README](challenges/arrInsertShift/README.md)| [Code](challenges/arrInsertShift/insert-shift-array.java)|    
 | 03          | [README](challenges/array-binary-search/README.md)| [Code](challenges/array-binary-search/solution.java)|
 | 05,06,07          | [README](challenges/LinkedList/README.md)| [Code](challenges/LinkedList/src/com/company/main/LinkedList.java)|
+|11        | [README](challenges/stack-queue/README.md)| [Code](challenges/stack-queue/lib/src/main/java/stack/queue/PseudoQueue.java)|
 
