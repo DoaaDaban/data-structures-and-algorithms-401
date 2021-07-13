@@ -33,3 +33,15 @@ Used the Node class which holds the data and a reference variable of type node t
 - toString() **Overriden** : Displays the data held in the queue with String return value . O(n)
 
 
+### PseudoQueue Class :
+#### Member Variables :
+- Stack<G> stack : holds the queue elements .
+- Stack<G> stack2 : holds the temporary elements when enqueing .
+
+
+#### Methods :
+
+- enqueue (G data) : 
+- dequeue () :
+
+![WhiteBoard](solution.png)

@@ -17,9 +17,9 @@ public class Queue<G> {
             return;
         }
 
-            rear.next = newNode;
-            rear = newNode;
-            idx++;
+        rear.next = newNode;
+        rear = newNode;
+        idx++;
     }
 
     public Node<G> dequeue() {
