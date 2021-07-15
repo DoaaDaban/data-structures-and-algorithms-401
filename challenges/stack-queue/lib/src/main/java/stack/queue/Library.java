@@ -28,7 +28,9 @@ public class Library {
         queue.enqueue(17);
         queue.enqueue(18);
         queue.dequeue();
-        System.out.println(queue.peek());
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
         System.out.println(queue);
 
         PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
@@ -37,6 +39,17 @@ public class Library {
         pseudoQueue.enqueue(17);
         pseudoQueue.enqueue(18);
         pseudoQueue.dequeue();
+        pseudoQueue.dequeue();
+        pseudoQueue.dequeue();
+        pseudoQueue.dequeue();
         System.out.println(pseudoQueue.toString());
+
+        AnimalShelter shelter = new AnimalShelter();
+        shelter.enqueue(new Animal("cat"));
+        shelter.enqueue(new Animal("dog"));
+        shelter.enqueue(new Animal("cat"));
+        shelter.enqueue(new Animal("dog"));
+
+        System.out.println(shelter.getCats().getIdx());
     }
 }

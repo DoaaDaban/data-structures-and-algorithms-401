@@ -41,7 +41,25 @@ Used the Node class which holds the data and a reference variable of type node t
 
 #### Methods :
 
-- enqueue (G data) : 
-- dequeue () :
+- enqueue (G data) : Adds an element to the queue using two stacks .
+- dequeue () : Removes the oldest element .
 
 ![WhiteBoard](solution.png)
+
+
+### Animal Class
+#### Member variables 
+- String type : holds the type of the animal .
+
+### AnimalShelter Class 
+- Queue<Animal> dogs : queue to hold animals from type dogs .
+
+- Queue<Animal> cats : queue to hold animals from type cats .
+
+#### Methods :
+
+- enqueue(Animal animal) : Adds an element to the queue of cats or dogs .
+
+- dequeue (String pref) : Removes element based on the pref variable .
+
+![WhiteBoard](animal.png)
