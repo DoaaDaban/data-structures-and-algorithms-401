@@ -3,53 +3,73 @@
  */
 package stack.queue;
 
+import java.util.Stack;
+
 public class Library {
     public boolean someLibraryMethod() {
         return true;
     }
-
+    public boolean validateBrackets(String toVal) {
+        Stack<Character> brackets = new Stack<>();
+        if(toVal.length() == 0) {
+            return false;
+        }
+        for (int i = 0; i < toVal.length(); i++) {
+            if(toVal.charAt(i) == '{' || toVal.charAt(i) == '[' || toVal.charAt(i) == '(') {
+                brackets.push(toVal.charAt(i));
+            }
+            else if (toVal.charAt(i) == '}' && brackets.peek() == '{')
+                brackets.pop();
+            else if (toVal.charAt(i) == ']' && brackets.peek() == '[')
+                brackets.pop();
+            else if (toVal.charAt(i) == ')' && brackets.peek() == '(')
+                brackets.pop();
+        }
+        return brackets.isEmpty();
+    }
     public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
-        stack.push(5);
-        stack.push(6);
-        stack.push(7);
-        stack.push(9);
-        stack.pop();
-        stack.pop();
-        stack.pop();
-        stack.pop();
-        System.out.println(stack.isEmpty());
-
-        Queue<Integer> queue = new Queue<>();
-
-
-        queue.enqueue(15);
-        queue.enqueue(16);
-        queue.enqueue(17);
-        queue.enqueue(18);
-        queue.dequeue();
-        queue.dequeue();
-        queue.dequeue();
-        queue.dequeue();
-        System.out.println(queue);
-
-        PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
-        pseudoQueue.enqueue(15);
-        pseudoQueue.enqueue(16);
-        pseudoQueue.enqueue(17);
-        pseudoQueue.enqueue(18);
-        pseudoQueue.dequeue();
-        pseudoQueue.dequeue();
-        pseudoQueue.dequeue();
-        pseudoQueue.dequeue();
-        System.out.println(pseudoQueue.toString());
-
-        AnimalShelter shelter = new AnimalShelter();
-        shelter.enqueue(new Animal("cat"));
-        shelter.enqueue(new Animal("dog"));
-        shelter.enqueue(new Animal("cat"));
-        shelter.enqueue(new Animal("dog"));
-
-        System.out.println(shelter.getCats().getIdx());
+//        Stack<Integer> stack = new Stack<>();
+//        stack.push(5);
+//        stack.push(6);
+//        stack.push(7);
+//        stack.push(9);
+//        stack.pop();
+//        stack.pop();
+//        stack.pop();
+//        stack.pop();
+//        System.out.println(stack.isEmpty());
+        System.out.println(new Library().validateBrackets(""));
+//
+//        Queue<Integer> queue = new Queue<>();
+//
+//
+//        queue.enqueue(15);
+//        queue.enqueue(16);
+//        queue.enqueue(17);
+//        queue.enqueue(18);
+//        queue.dequeue();
+//        queue.dequeue();
+//        queue.dequeue();
+//        queue.dequeue();
+//        System.out.println(queue);
+//
+//        PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
+//        pseudoQueue.enqueue(15);
+//        pseudoQueue.enqueue(16);
+//        pseudoQueue.enqueue(17);
+//        pseudoQueue.enqueue(18);
+//        pseudoQueue.dequeue();
+//        pseudoQueue.dequeue();
+//        pseudoQueue.dequeue();
+//        pseudoQueue.dequeue();
+//        System.out.println(pseudoQueue.toString());
+//
+//        AnimalShelter shelter = new AnimalShelter();
+//        shelter.enqueue(new Animal("cat"));
+//        shelter.enqueue(new Animal("dog"));
+//        shelter.enqueue(new Animal("cat"));
+//        shelter.enqueue(new Animal("dog"));
+//
+//        System.out.println(shelter.getCats().getIdx());
     }
 }
