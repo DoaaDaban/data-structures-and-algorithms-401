@@ -63,3 +63,23 @@ Used the Node class which holds the data and a reference variable of type node t
 - dequeue (String pref) : Removes element based on the pref variable .
 
 ![WhiteBoard](animal.png)
+
+
+# Challenge Validate brackets 
+
+- Method to validate if a given String is balanced and returns boolean as a return value .
+
+
+## Whiteboard Process
+![WhiteBoard](validate.png)
+
+
+## Approach & Efficiency
+- Used a stack to validate using the push and pop methods,
+With O(n) for both time and space.
+
+## Solution
+- Clone the repo .
+- Navigate to the challenges/stack-queue Directory .
+- Rub it using the IDE or the terminal using ./gradlew run.
+- Provided Running Code in the main method . 
