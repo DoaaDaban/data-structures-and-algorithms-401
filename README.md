@@ -11,4 +11,5 @@
 | 05,06,07          | [README](challenges/LinkedList/README.md)| [Code](challenges/LinkedList/src/com/company/main/LinkedList.java)|
 |11        | [README](challenges/stack-queue/README.md)| [Code](challenges/stack-queue/lib/src/main/java/stack/queue/PseudoQueue.java)|
 |12        | [README](challenges/stack-queue/README.md)| [Code](challenges/stack-queue/lib/src/main/java/stack/queue/AnimalShelter.java)|
+|13        | [README](challenges/stack-queue/README.md)| [Code](challenges/stack-queue/lib/src/main/java/stack/queue/Library.java)|
 
