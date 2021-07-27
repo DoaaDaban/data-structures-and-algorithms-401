@@ -9,6 +9,8 @@ public class Main {
         binaryTree.root.right = new Node<>(3);
         binaryTree.root.left.left = new Node<>(4);
         binaryTree.root.left.right = new Node<>(5);
+        binaryTree.root.left.right.right = new Node<>(10);
+        System.out.println(binaryTree.max());
 //        BinarySearchTree binarySearchTree = new BinarySearchTree();
 //        binarySearchTree.root = new Node<>(15);
 //        binarySearchTree.Add(12);

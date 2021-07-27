@@ -53,4 +53,25 @@ BinarySearchTree binarySearchTree;
         Assertions.assertEquals(10 , binaryTree.DFSPostOrder(binaryTree.root).size());
         Assertions.assertEquals(15 , binaryTree.DFSPreOrder(binaryTree.root).size());
     }
+
+    // Test max method
+    @Test
+    public void testMax() {
+        binaryTree.root = new Node<>(1);
+        binaryTree.root.left = new Node<>(2);
+        binaryTree.root.right = new Node<>(3);
+        binaryTree.root.left.left = new Node<>(4);
+        binaryTree.root.left.right = new Node<>(5);
+
+        Assertions.assertEquals(5 , binaryTree.max());
+    }
+
+//    Test for empty tree
+    @Test
+    public void testMaxEmptyTree() {
+        Assertions.assertThrows(NullPointerException.class, () -> {
+            binaryTree.max();
+        });
+    }
 }
+

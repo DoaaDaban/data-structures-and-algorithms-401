@@ -42,4 +42,16 @@ public class BinaryTree<G> {
         }
         return content;
     }
+
+    public int max(){
+        List<Integer> myList = (List<Integer>) this.DFSPreOrder(this.root);
+        int max = Integer.MIN_VALUE;
+        for (Integer integer : myList) {
+            if (integer > max) {
+                max = integer;
+            }
+        }
+
+        return max;
+    }
 }
