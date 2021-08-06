@@ -1,6 +1,7 @@
 package com.mohiesen.tree.test;
 import com.mohiesen.tree.BinarySearchTree;
 import com.mohiesen.tree.BinaryTree;
+import com.mohiesen.tree.Main;
 import com.mohiesen.tree.Node;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,6 +10,7 @@ import org.junit.jupiter.api.Test;
 public class TestTree {
 BinaryTree<Integer> binaryTree;
 BinarySearchTree binarySearchTree;
+Main myMain;
 
 
 //Can successfully instantiate an empty tree
@@ -16,13 +18,14 @@ BinarySearchTree binarySearchTree;
     public void testInit(){
         binarySearchTree = new BinarySearchTree();
         binaryTree = new BinaryTree<>();
+        myMain = new Main();
     }
 
  //Can successfully instantiate a tree with a single root node
     @Test
     public void testOneRoot () {
         binaryTree.root = new Node<>(15);
-        Assertions.assertEquals(15 , binaryTree.root);
+        Assertions.assertEquals(15 , binaryTree.root.data);
     }
 
  //Can successfully add a left child and right child to a single root node
@@ -72,6 +75,104 @@ BinarySearchTree binarySearchTree;
         Assertions.assertThrows(NullPointerException.class, () -> {
             binaryTree.max();
         });
+    }
+
+    /*
+    Test to BFS Empty Tree
+     */
+
+    @Test
+    public void testBFSEmptyTree() {
+        binaryTree.root = new Node<>(1);
+        binaryTree.root.left = new Node<>(2);
+        binaryTree.root.right = new Node<>(3);
+        binaryTree.root.left.left = new Node<>(4);
+        binaryTree.root.left.right = new Node<>(5);
+        Assertions.assertEquals(5 , binaryTree.breadth(binaryTree).size(), "Returns the numbers of elements in the returned list for traversing a tree");
+    }
+
+
+        /*
+    Test to BFS Empty Tree
+     */
+
+    @Test
+    public void testBFSTree() {
+
+        Assertions.assertNull(binaryTree.breadth(binaryTree) , "Returns null for traversing an empty tree");
+    }
+
+    /*
+        Test Two full trees
+     */
+
+    @Test
+    public void testTwoFullTrees(){
+        binaryTree.root = new Node<>(1);
+        binaryTree.root.left = new Node<>(2);
+        binaryTree.root.right = new Node<>(3);
+        binaryTree.root.left.left = new Node<>(4);
+        binaryTree.root.left.right = new Node<>(5);
+
+        BinaryTree binaryTree2 = new BinaryTree();
+
+        binaryTree2.root = new Node<>(1);
+        binaryTree2.root.left = new Node<>(2);
+        binaryTree2.root.right = new Node<>(3);
+        binaryTree2.root.left.left = new Node<>(4);
+        binaryTree2.root.left.right = new Node<>(5);
+
+        Assertions.assertTrue(myMain.compareTree(binaryTree2 , binaryTree));
+    }
+
+    /*
+    Test Unequal two trees
+     */
+
+    @Test
+    public void testNonEqualTwoTrees() {
+        binaryTree.root = new Node<>(1);
+        binaryTree.root.left = new Node<>(2);
+        binaryTree.root.right = new Node<>(3);
+        binaryTree.root.left.left = new Node<>(4);
+        binaryTree.root.left.right = new Node<>(5);
+
+        BinaryTree binaryTree2 = new BinaryTree();
+
+        binaryTree2.root = new Node<>(1);
+        binaryTree2.root.left = new Node<>(2);
+        binaryTree2.root.right = new Node<>(3);
+
+
+        Assertions.assertFalse(myMain.compareTree(binaryTree , binaryTree2));
+    }
+
+    /*
+    Test comparing Empty tree
+     */
+
+    @Test
+    public void testEmptyTree()
+    {        binaryTree.root = new Node<>(1);
+        binaryTree.root.left = new Node<>(2);
+        binaryTree.root.right = new Node<>(3);
+        binaryTree.root.left.left = new Node<>(4);
+        binaryTree.root.left.right = new Node<>(5);
+
+        BinaryTree binaryTree2 = new BinaryTree();
+
+        Assertions.assertFalse(myMain.compareTree(binaryTree2 , binaryTree));
+    }
+
+    /*
+    Test comparing two empty trees
+     */
+
+    @Test
+    public void testTwoEmptyTrees() {
+        BinaryTree binaryTree2 = new BinaryTree();
+
+        Assertions.assertTrue(myMain.compareTree(binaryTree , binaryTree2));
     }
 }
 

@@ -13,4 +13,5 @@
 |12        | [README](challenges/stack-queue/README.md)| [Code](challenges/stack-queue/lib/src/main/java/stack/queue/AnimalShelter.java)|
 |13        | [README](challenges/stack-queue/README.md)| [Code](challenges/stack-queue/lib/src/main/java/stack/queue/Library.java)|
 |16        | [README](challenges/BinaryTree/README.md)| [Code](challenges/BinaryTree/src/com/mohiesen/tree/BinaryTree.java)|
+|17        | [README](challenges/BinaryTree/README.md)| [Code](challenges/BinaryTree/src/com/mohiesen/tree/BinaryTree.java)|
 
