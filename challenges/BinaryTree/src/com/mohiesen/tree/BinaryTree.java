@@ -2,7 +2,9 @@ package com.mohiesen.tree;
 
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class BinaryTree<G> {
     public Node<G> root;
@@ -12,13 +14,13 @@ public class BinaryTree<G> {
         this.root = new Node<>(rootData);
     }
 
-    public BinaryTree(){
+    public BinaryTree() {
         this.root = null;
         this.content = new ArrayList<>();
     }
-
+    private int count = 0 ;
     public List<G> DFSInOrder(Node<G> node) {
-        if(node != null){
+        if (node != null) {
             DFSInOrder(node.left);
             this.content.add(node.data);
             DFSInOrder(node.right);
@@ -27,7 +29,9 @@ public class BinaryTree<G> {
     }
 
     public List<G> DFSPreOrder(Node<G> node) {
-        if (node == null) { return null; }
+        if (node == null) {
+            return null;
+        }
         this.content.add(node.data);
         DFSPreOrder(node.left);
         DFSPreOrder(node.right);
@@ -35,7 +39,7 @@ public class BinaryTree<G> {
     }
 
     public List<G> DFSPostOrder(Node<G> node) {
-        if(node != null){
+        if (node != null) {
             DFSInOrder(node.left);
             DFSInOrder(node.right);
             this.content.add(node.data);
@@ -43,7 +47,7 @@ public class BinaryTree<G> {
         return content;
     }
 
-    public int max(){
+    public int max() {
         List<Integer> myList = (List<Integer>) this.DFSPreOrder(this.root);
         int max = Integer.MIN_VALUE;
         for (Integer integer : myList) {
@@ -54,4 +58,28 @@ public class BinaryTree<G> {
 
         return max;
     }
+
+    Queue<Node> queue = new LinkedList<Node>();
+    List<G> list = new ArrayList<>();
+
+    public List<G> breadth(BinaryTree tree) {
+        if (root == null)
+            return null;
+        queue.clear();
+        queue.add(root);
+        list.add((G) root.data);
+        while (!queue.isEmpty()) {
+            Node node = queue.remove();
+            if (node.left != null) {
+                queue.add(node.left);
+                list.add((G) node.left.data);
+            }
+            if (node.right != null) {
+                queue.add(node.right);
+                list.add((G) node.right.data);
+            }
+        }
+        return list;
+    }
+
 }

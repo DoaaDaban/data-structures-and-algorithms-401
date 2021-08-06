@@ -42,3 +42,20 @@ Time O(n)
 ## Solution
 - Make an object of the Binary Tree and add elements to it.
 - Call the max method to find the maximum value in the tree.
+
+
+# Challenge 17 : Apply Breadth first search to a tree
+
+## Whiteboard Process
+![solution](solution1.png)
+
+
+## Approach & Efficiency
+Used a queue to travers the tree and add the root node to traverse and dequeue when done and add the latest one.
+
+Space O(2*n)
+Time O(n)
+
+## Solution
+- Make an object of the Binary Tree and add elements to it.
+- Call the breadth method to get a list of elements in BFS order.
