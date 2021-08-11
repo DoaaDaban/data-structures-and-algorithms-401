@@ -16,4 +16,6 @@
 |17        | [README](challenges/BinaryTree/README.md)| [Code](challenges/BinaryTree/src/com/mohiesen/tree/BinaryTree.java)|
 |18        | [README](challenges/BinaryTree/README.md)| [Code](challenges/k-ary-tree/app/src/main)|
 |26        | [README](challenges/selection-sort/README.md)| [Code](challenges/selection-sort/src/com/company/Main.java)|
+|27        | [README](challenges/merge-sort/README.md)| [Code](challenges/merge-sort/src/com/company/Main.java)|
+
 
