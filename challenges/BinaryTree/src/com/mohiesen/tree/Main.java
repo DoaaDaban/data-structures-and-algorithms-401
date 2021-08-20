@@ -1,5 +1,9 @@
 package com.mohiesen.tree;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class Main {
     public  boolean compareTree(BinaryTree tree , BinaryTree tree2) {
         int firstTreeCount = countLeaves(tree.root);
@@ -28,10 +32,16 @@ public class Main {
 	    binaryTree.root = new Node<>(1);
         binaryTree.root.left = new Node<>(3);
         binaryTree.root.right = new Node<>(2);
-        binaryTree.root.left.left = new Node<>(4);
+        binaryTree.root.left.left = new Node<>(5);
         binaryTree.root.left.right = new Node<>(5);
 
-        BinaryTree<Integer> binaryTree2 = new BinaryTree<>();
+        List<Integer> binaryData = binaryTree.DFSPreOrder(binaryTree.root);
+        System.out.println(binaryData);
+        Set<Integer> set = new HashSet<>();
+        set.addAll(binaryData);
+        System.out.println(set.size() == binaryData.size());
+//
+//        BinaryTree<Integer> binaryTree2 = new BinaryTree<>();
 //        binaryTree2.root = new Node<>(1);
 //        binaryTree2.root.left = new Node<>(3);
 //        binaryTree2.root.right = new Node<>(2);
@@ -47,6 +57,22 @@ public class Main {
 //        binarySearchTree.Add(12);
 //        binarySearchTree.Add(16);
 //        System.out.println(binarySearchTree.contains(12));
+// Divide and conquer nlogn
+//        int arr[] = {1 , 2 , 5 , 7 ,18};
+//        int max = 0 ;
+//        int counter  = 1 ;
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i] > max){
+//                max = arr[i];
+//            }
+//            for (int j = 0; j < arr.length; j++) {
+//                System.out.println("from inner loop " + counter++);
+//            }
+//        }
+//
+//        System.out.println("array size is " + arr.length);
     }
+
+
 
 }
