@@ -13,7 +13,7 @@ public class LinkedList <T>{
             head = newNode;
         }
         else {
-            Node temp = head;
+            Node<T> temp = head;
             head = newNode;
             head.next = temp;
 
