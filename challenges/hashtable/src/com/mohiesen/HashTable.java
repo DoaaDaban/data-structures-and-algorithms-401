@@ -4,9 +4,16 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class HashTable<K,V> {
+
+
     private ArrayList<HashNode<K, V>> bucketArray;
     private int numBuckets;
     private int size;
+
+    public int getNumBuckets() {
+        return numBuckets;
+    }
+
     public HashTable() {
         bucketArray = new ArrayList<>();
         numBuckets = 30;
@@ -109,6 +116,9 @@ public class HashTable<K,V> {
 
     public boolean contains(K key) {
         return this.get(key) != null;
+    }
+    public ArrayList<HashNode<K, V>> getBucketArray() {
+        return bucketArray;
     }
 
     @Override
