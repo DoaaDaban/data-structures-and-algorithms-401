@@ -48,3 +48,22 @@ O(n)
 ## Solution
 Declare two trees with values and make an object of the main class
 then call the method over those two arrays and save the value in an array.
+
+
+# Challenge 33
+To apply the concept of left join for two hash tables
+and get the common values and combine into one.
+
+## Whiteboard Process
+![solution](solution2.png)
+
+## Approach & Efficiency
+Created an array list of type another array list of type string to hold the joined value for each element,
+looped into the first hash table and pushed the values into an array list then pushed the common value into the same array list and pushed the array list to the bigger one.
+return the array list.
+O(n)
+O(n)
+
+## Solution
+Declare two hash tables and add some values to them.
+Make an object of the main class, call the method upon that object then save the returned data into an array list.
