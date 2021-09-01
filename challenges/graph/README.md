@@ -18,3 +18,17 @@ Class Graph :
   - getNodes() : returns All nodes in a graph.
   - getNeighbours(T node) : returns all neighbours of a specific graph.
   - getSize() : returns the size of the graph.
+
+
+# Challenge 36
+To apply Breadth first traversal to a graph.
+
+## Whiteboard Process
+![solution.png](solution.png)
+
+## Approach & Efficiency
+Used two Queue-Linked lists To traverse each Neighbour in the node.
+
+## Solution
+To try the method and find out that it's working, create a graph object
+Then add some nodes and connect them with edges and then call the method on the graph object.
