@@ -103,4 +103,18 @@ public class GraphTest {
     public void testEmpty(){
         Assertions.assertEquals(0 , testGraph.nodes.size());
     }
+
+    /*
+    Test Breadth first Traversal
+     */
+
+    @Test
+    public void testBFV(){
+        testGraph.addNode(1);
+        testGraph.addNode(2);
+        testGraph.addNode(3);
+        testGraph.addEdge(1 , 2 ,0);
+        testGraph.addEdge(2 , 3 ,0);
+        Assertions.assertEquals("[1, 2, 3]" , testGraph.BFV(1).toString());
+    }
 }

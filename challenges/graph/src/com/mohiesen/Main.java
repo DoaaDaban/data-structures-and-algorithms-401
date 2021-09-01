@@ -7,9 +7,8 @@ public class Main {
         System.out.println(myGraph.addNode("Hello"));
         System.out.println(myGraph.addNode("Helklo"));
         myGraph.addEdge("Hello" , "mor" , 1);
-        System.out.println(myGraph);
-        System.out.println(myGraph.getNodes());
-        System.out.println(myGraph.getNeighbours("Hello"));
+myGraph.addEdge("Helklo" , "mor" , 2);
+        System.out.println(myGraph.BFV("Hello"));
 
     }
 }
