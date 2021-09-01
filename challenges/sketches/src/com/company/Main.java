@@ -35,18 +35,28 @@ public class Main {
 //            System.out.println();
 //        }
 //
-        int n = sc.nextInt();
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (j >=n - i-1){
-                    System.out.print("*");
-                }
-                else {
-                    System.out.print(" ");
-                }
+//        int n = sc.nextInt();
+//        for (int i = 0; i < n; i++) {
+//            for (int j = 0; j < n; j++) {
+//                if (j >=n - i-1){
+//                    System.out.print("*");
+//                }
+//                else {
+//                    System.out.print(" ");
+//                }
+//            }
+//            System.out.println();
+//        }
+        int[] arr ={10 , 4  , 6 ,3, 5};
+        int max = 0;
+        String maxNums = "";
+        for (int i = arr.length -1; i >= 0 ; i--) {
+            if(arr[i] > max) {
+                max = arr[i];
+                maxNums += max;
             }
-            System.out.println();
         }
+        System.out.println(maxNums);
 //        System.out.println(isUnique("helo"));
     }
 }
