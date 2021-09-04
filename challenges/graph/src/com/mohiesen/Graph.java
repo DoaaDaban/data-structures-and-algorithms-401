@@ -43,6 +43,26 @@ public class Graph <T>{
         }
         return traversed;
     }
+
+    public Queue<T> DFS(T root){
+        Queue<T> visited = new LinkedList<>();
+        Stack<T> stack = new Stack<>();
+        stack.push(root);
+
+        while (!stack.isEmpty()){
+            T node = stack.pop();
+            if (!visited.contains(node)){
+                visited.add(node);
+
+                for (T v: getNeighbours(node)) {
+                    stack.push(v);
+                }
+            }
+        }
+
+        return visited;
+    }
+
     public Set<T> getNodes(){
         return nodes.keySet();
     }
