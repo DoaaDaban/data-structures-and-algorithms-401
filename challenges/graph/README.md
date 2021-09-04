@@ -44,3 +44,17 @@ Traversed the given array and check each index is a neighbour of the next index.
 
 ## Solution
 Add edges between specific nodes and call the method and after that print the result.
+
+# Challenge 38
+Apply Depth First traverse to a given graph and return a Queue with the visited nodes.
+
+## Whiteboard Process
+![solution](DFS.png)
+
+## Approach & Efficiency
+Used A queue to hold the visited elements once and a stack to travers the 
+given nodes keep traversing the next depth node and push to the stack then keep popping until a non visited node
+occurs and repeat.
+
+## Solution
+Make a graph and call the method upon it and print the result out.

@@ -136,4 +136,16 @@ public class GraphTest {
         String[] arr = {"Hello" , "mor"};
         Assertions.assertEquals("True, 10$" , testGraph1.businessTrip(arr));
     }
+
+    @Test
+    public void testDFS(){
+        testGraph.addNode(10);
+        testGraph.addNode(20);
+        testGraph.addNode(15);
+        testGraph.addNode(25);
+        testGraph.addEdge(10,15 ,5);
+        testGraph.addEdge(15,20 ,5);
+        testGraph.addEdge(20,25 ,5);
+        Assertions.assertEquals("[10, 15, 20, 25]" , testGraph.DFS(10).toString());
+    }
 }
