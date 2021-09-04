@@ -1,5 +1,4 @@
 package com.mohiesen;
-
 import java.util.ArrayList;
 
 public class Main {
@@ -23,15 +22,25 @@ public class Main {
             mySecondArr[i + myArr.length] = myArr[i];
         }
 
-        try{
-            System.out.println("maryam");
-            throw new NullPointerException();
+//        try{
+//            System.out.println("maryam");
+//            throw new NullPointerException();
+//        }
+//        catch (NullPointerException e){
+//            System.out.println(e.toString());
+//        }
+//
+//        finally {
+//            System.out.println("Hello");
+//        }
+        try {
+            System.out.println(5 / 0);
+        }
+        catch (ArithmeticException a){
+            System.out.println("Divide by zero");
         }
 
-        finally {
-            System.out.println("Hello");
-        }
-
+        System.out.println("Jaradat");
 
     }
 }

@@ -27,6 +27,26 @@ public class Main {
         }
         return count;
     }
+    public static boolean isSameTree(Node p, Node q) {
+        // p and q are both null
+        if (p == null && q == null) return true;
+        // one of p and q is null
+        if (q == null || p == null) return false;
+        if (p.data != q.data) return false;
+        return isSameTree(p.right, q.right) &&
+                isSameTree(p.left, q.left);
+    }
+
+    public static boolean isSym(Node p, Node q) {
+        // p and q are both null
+        if (p == null && q == null) return true;
+        // one of p and q is null
+        if (q == null || p == null) return false;
+
+        return isSym(p.right, q.left) &&
+                isSym(p.left, q.right);
+    }
+
     public static void main(String[] args) {
 	    BinaryTree<Integer> binaryTree = new BinaryTree<>();
 	    binaryTree.root = new Node<>(1);
@@ -34,20 +54,20 @@ public class Main {
         binaryTree.root.right = new Node<>(2);
         binaryTree.root.left.left = new Node<>(5);
         binaryTree.root.left.right = new Node<>(5);
-
-        List<Integer> binaryData = binaryTree.DFSPreOrder(binaryTree.root);
-        System.out.println(binaryData);
-        Set<Integer> set = new HashSet<>();
-        set.addAll(binaryData);
-        System.out.println(set.size() == binaryData.size());
+        System.out.println(binaryTree.DFSPreOrder(binaryTree.root));
+//        List<Integer> binaryData = binaryTree.DFSPreOrder(binaryTree.root);
+//        System.out.println(binaryData);
+//        Set<Integer> set = new HashSet<>();
+//        set.addAll(binaryData);
+//        System.out.println(set.size() == binaryData.size());
 //
-//        BinaryTree<Integer> binaryTree2 = new BinaryTree<>();
-//        binaryTree2.root = new Node<>(1);
-//        binaryTree2.root.left = new Node<>(3);
-//        binaryTree2.root.right = new Node<>(2);
-//        binaryTree2.root.left.left = new Node<>(4);
-//        binaryTree2.root.left.right = new Node<>(5);
-
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>();
+        binaryTree2.root = new Node<>(1);
+        binaryTree2.root.left = new Node<>(3);
+        binaryTree2.root.right = new Node<>(2);
+        binaryTree2.root.left.left = new Node<>(4);
+        binaryTree2.root.left.right = new Node<>(5);
+        System.out.println(isSameTree(binaryTree.root , binaryTree2.root));
 //        System.out.println(compareTree(binaryTree , binaryTree2));
 //        binaryTree.root.left.right.right = new Node<>(10);
 //        System.out.println(binaryTree.max());

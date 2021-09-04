@@ -35,6 +35,26 @@ public class Graph <T>{
         return this.nodes.size();
     }
 
+    public String businessTrip(String[] cities){
+        int totalCost = 0;
+        for (int i = 0; i < cities.length-1; i++) {
+            if (getNeighbours((T) cities[i]).contains(cities[i+1])){
+                totalCost += nodes.get(cities[i]).get(cities[i+1]);
+
+            }
+            else {
+                totalCost = 0;
+                break;
+            }
+
+        }
+        if(totalCost == 0){
+            return "False, " + totalCost + "$";
+        }
+        else {
+            return "True, " + totalCost + "$";
+        }
+    }
     @Override
     public String toString() {
         return "Graph{" +
