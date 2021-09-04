@@ -23,6 +23,26 @@ public class Graph <T>{
         nodes.get(node2).put(node1 , weight);
     }
 
+    public List<T> BFV(T root){
+        Queue<T> visited = new LinkedList<>();
+        Queue<T> list = new LinkedList<>();
+        List<T> traversed = new ArrayList<>();
+
+        list.add(root);
+        visited.add(root);
+
+        while (!list.isEmpty()){
+            T node = list.remove();
+            traversed.add(node);
+            for (T singleNode : getNeighbours(node)){
+                if (!visited.contains(singleNode)){
+                    visited.add(singleNode);
+                    list.add(singleNode);
+                }
+            }
+        }
+        return traversed;
+    }
     public Set<T> getNodes(){
         return nodes.keySet();
     }
