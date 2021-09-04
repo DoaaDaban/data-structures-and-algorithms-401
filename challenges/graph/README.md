@@ -32,3 +32,15 @@ Used two Queue-Linked lists To traverse each Neighbour in the node.
 ## Solution
 To try the method and find out that it's working, create a graph object
 Then add some nodes and connect them with edges and then call the method on the graph object.
+
+# Challenge 37
+Check if given nodes can be traversed(connected) or not and return boolean and total weight.
+
+## Whiteboard Process
+![solution](business.png)
+
+## Approach & Efficiency
+Traversed the given array and check each index is a neighbour of the next index.
+
+## Solution
+Add edges between specific nodes and call the method and after that print the result.
