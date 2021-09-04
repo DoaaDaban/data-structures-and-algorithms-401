@@ -117,4 +117,23 @@ public class GraphTest {
         testGraph.addEdge(2 , 3 ,0);
         Assertions.assertEquals("[1, 2, 3]" , testGraph.BFV(1).toString());
     }
+
+    /*
+    Business Trip test
+     */
+
+    @Test
+    public void testForEmpty(){
+        String[] arr ={};
+        Assertions.assertEquals("False, 0$" , testGraph.businessTrip(arr));
+    }
+    @Test
+    public void testHappyPath(){
+        Graph<String> testGraph1 = new Graph<>();
+        testGraph1.addEdge("Hello" , "mor" , 10);
+        testGraph1.addEdge("mor" , "Helklo" , 15);
+
+        String[] arr = {"Hello" , "mor"};
+        Assertions.assertEquals("True, 10$" , testGraph1.businessTrip(arr));
+    }
 }
